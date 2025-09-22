@@ -29,13 +29,13 @@ jobs:
       run: |
         brew update
         brew install automake
-    - uses: actions/checkout@v3
+    - uses: actions/checkout
 
     - name: Build
       run: cd dists/darwin && ./build
 
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v3.1.0
+      uses: actions/upload-artifact
       with:
         name: Mac jar
         path: target/libusb4java-darwin.jar
