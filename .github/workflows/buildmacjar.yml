@@ -28,7 +28,7 @@ jobs:
     - name: Install Additional Packages
       run: |
         brew update
-        brew install automake
+        brew install automake autoconf
     - uses: actions/checkout@v5
 
     - name: Build
