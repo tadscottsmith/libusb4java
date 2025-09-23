@@ -68,7 +68,7 @@ build_architecture () {
 
     # Build libusb
     autoreconf -i
-    ./configure --disable-shared --enable-static --with-pic --prefix="$ROOT_DIR" --host=$ARCH
+    ./configure --disable-shared --enable-static --with-pic --prefix="$ROOT_DIR" #--host=$ARCH
     make install-strip
 
     # Build libusb4java
@@ -92,5 +92,5 @@ build_architecture () {
     fi
 }
 
-build_architecture x86-64 x86_64
+#build_architecture x86-64 x86_64
 build_architecture aarch64 arm64
