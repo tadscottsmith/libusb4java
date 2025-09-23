@@ -28,6 +28,9 @@ jobs:
     - name: Install Additional Packages
       run: |
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        echo >> /home/runner/.bashrc
+        echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/runner/.bashrc
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
         brew update
         brew install automake autoconf libtool
     - uses: actions/checkout@v5
